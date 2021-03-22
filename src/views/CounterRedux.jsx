@@ -6,13 +6,22 @@ const CounterRedux = (props) => {
 
 	return (
 		<div>
-			<Login></Login>
-			<h1>Counter : {props.counter}</h1>
+			{/* <Login></Login>
+			<h1>Counter : {props.counter}</h1> */}
 			<p>{props.name}</p>
 			{/*  */}
-			<button onClick={() => props.onIncrementCounter()}>Increment</button>
+			{/* <button onClick={() => props.onIncrementCounter()}>Increment</button> */}
 			{/*  */}
-			<button onClick={() => props.onDecrementCounter()}>Decrement</button>
+			{/* <button onClick={() => props.onDecrementCounter()}>Decrement</button> */}
+
+			{/* Tugas 
+            1. Tangkep Value dari input
+            2. Rubah state store name sesuai dengan apa yang di input
+            3. klik ubah untuk trigger state name
+            */}
+			<input type="text" />
+
+			<button>ubah</button>
 		</div>
 	);
 };
