@@ -1,3 +1,5 @@
+import { act } from "react-dom/test-utils";
+
 // inisialisasi state awal
 const initialState = {
 	counter: 69,
@@ -19,6 +21,13 @@ const reducer = (state = initialState, action) => {
 		return {
 			...state,
 			counter: state.counter - 1,
+		};
+	}
+
+	if (action.type === "CHANGE_NAME") {
+		return {
+			...state,
+			name: action.data,
 		};
 	}
 

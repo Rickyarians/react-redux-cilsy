@@ -5,14 +5,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // panggil createstore
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 // panggil provider
 import { Provider } from "react-redux";
 // panggil reducer
-import reducer from "./store/reducer";
+import counter from "./store/reducerCounter";
+import name from "./store/reducerName";
 
+const rootReducer = combineReducers({
+	counterReducer: counter,
+	nameReducer: name,
+});
 // init store
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 ReactDOM.render(
 	<React.StrictMode>
